@@ -1,0 +1,54 @@
+#header {
+  @include flexContent;
+  margin: 20px 150px;
+  font-family: $serif-display;
+  font-weight: weight(bold);
+}
+.logo-cont {
+  img {
+    padding-top: 15px;
+  }
+}
+#nav-bar {
+  margin: 7px 7px 0 0;
+}
+.nav-bar-cont {
+  @include flexContent;
+}
+.nav-bar-list {
+  @include flexContent;
+  list-style: none;
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    word-spacing: 0.3rem;
+    color: $neutral-grayish-violet;
+
+    &:hover {
+      color: $neutral-dark-violet;
+    }
+  }
+}
+
+.last-child {
+  @include buttons(#fff, $neutral-dark-violet);
+  color: $neutral-dark-violet;
+
+  &:hover {
+    background-color: $neutral-dark-violet;
+    color: #fff;
+    border: 1px solid $neutral-dark-violet;
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+    border: none;
+  }
+  &:active {
+    transform: translateY(0.2rem);
+    border: none;
+  }
+}
