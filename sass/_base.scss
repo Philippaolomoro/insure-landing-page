@@ -17,31 +17,3 @@
   background-color: $background-color;
   border: 1px solid $border-color;
 }
-
-%pseudos {
-  content: '';
-  position: absolute;
-}
-@mixin before($el) {
-  &:#{el} {
-    @extend %pseudos;
-    background-repeat: no-repeat;
-    background-position: right;
-    display: block;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    opacity: 1;
-    @content;
-  }
-}
-
-@function setTextColor($background) {
-  @if lightness($background) > 50 {
-    @return $neutral-dark-violet;
-  } @else {
-    @return #fff;
-  }
-}
